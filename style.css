@@ -1,0 +1,44 @@
+h1 {
+    font-size: 1.5em;
+}
+
+#content {
+    width:50%;
+    margin:auto;
+}
+#byline {
+    font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
+}
+/* list of fonts...first font is preferred but if comp doesnt have then it defaults to next */
+
+#article{
+    color: purple;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.caption{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 0.8em;
+}
+
+#stats{
+    font-size: 0.75em;
+}
+#tagline{
+    font-size: 0.5em;
+}
+
+/* mobile rules */
+@media (orientation:portrait) {
+    #content {
+        width: 100%;
+    }
+    body {
+        font-size: 2em;
+    }
+}
+
+div{
+    border: 
+}
