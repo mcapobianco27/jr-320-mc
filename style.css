@@ -19,14 +19,14 @@ h1 {
 .caption{
     color: black;
     font-family:'Times New Roman', Times, serif;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 #stats{
-    font-size: 0.75em;
+    font-size: 1em;
 }
 #tagline{
-    font-size: 0.5em;
+    font-size: 0.75em;
 }
 
 /* mobile rules */
@@ -35,7 +35,8 @@ h1 {
         width: 100%;
     }
     body {
-        font-size: 2em;
+        font-size: 2.5em;
+        /*2.5 em font size used for mobile users and readers */
     }
 }
 
