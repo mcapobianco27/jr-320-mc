@@ -5,6 +5,7 @@ h1 {
 #content {
     width:50%;
     margin:auto;
+    /* don't want article to take up the entire screen, so 50% */
 }
 #byline {
     font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
@@ -34,6 +35,7 @@ h1 {
     #content {
         width: 100%;
     }
+/* font size bumped up from original submission to support mobile users */
     body {
         font-size: 2.5em;
         /*2.5 em font size used for mobile users and readers */
