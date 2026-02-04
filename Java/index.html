@@ -1,0 +1,84 @@
+<html>
+<head>
+  <title>Restaurant Filter</title>
+  <style>
+    html, body { margin:0; padding:20px; height:100%; }
+    button { padding:10px 20px; margin:5px; font-size:18px}
+    .coffee { background:#f4a261; color:#000; }
+    .lunch  { background:#2a9d8f; color:#fff; }
+    .desert { background:#e76f51; color:#fff; }
+    
+    .item {
+      padding:15px; margin:10px 0;
+      font-size:20px; border-radius:5px;
+      background: black;
+      color: white;
+    }
+    
+    .item.hidden { display:none; }
+  </style>
+</head>
+<body>
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('pop')">Pop</button>
+  <button onclick="filter('dance/electronic')">Dance/Electronic</button>
+  <button onclick="filter('contemporary-instrumental')">Contemporary Instrumental Music</button>
+  <button onclick="filter('rock')">Rock</button>
+  <button onclick="filter('alternative')">Alternative</button>
+  <button onclick="filter('rnb')">R&amp;B</button>
+  <button onclick="filter('rap')">Rap</button>
+  <button onclick="filter('country')">Country</button>
+  <button onclick="filter('jazz')">Jazz</button>
+  <button onclick="filter('latin')">Latin</button>
+  <button onclick="filter('classical')">Classical</button>
+  <button onclick="filter('comedy')">Comedy</button>
+ 
+  <div id="list"></div>
+<!--make it so the buttons ar ehighlighted based on genre-->
+  <script>
+    const songs = [
+      { title: "Abracadabra", artist: "Lady Gaga", genre: "pop" },
+      { title: "Manchild", artist: "Sabrina Carpenter", genre: "pop" },
+      { title: "APT.", artist: "ROSÉ & Bruno Mars", genre: "pop" },
+      { title: "Wildflower", artist: "Billie Eilish", genre: "pop" },
+      { title: "DtMF", artist: "Bad Bunny", genre: "latin" },
+      { title: "Anxiety", artist: "Doechii", genre: "rap" },
+      { title: "Luther", artist: "Kendrick Lamar & SZA", genre: "rnb" },
+      { title: "As Alive as You Need Me to Be", artist: "Nine Inch Nails", genre: "rock" },
+      { title: "Caramel", artist: "Sleep Token", genre: "rock" },
+      { title: "Glum", artist: "Hayley Williams", genre: "rock" },
+      { title: "Never Enough", artist: "Turnstile", genre: "rock" },
+      { title: "Zombie", artist: "Yungblud", genre: "rock" },
+      { title: "Everything Is Peaceful Love", artist: "Bon Iver", genre: "alternative" },
+      { title: "Alone", artist: "The Cure", genre: "alternative" },
+      { title: "Folded", artist: "Kehlani", genre: "rnb" },
+      { title: "YUKON", artist: "Justin Bieber", genre: "rnb" },
+      { title: "Heart Of A Woman", artist: "Summer Walker", genre: "rnb" },
+      { title: "Nose on the Grindstone", artist: "Tyler Childers", genre: "country" },
+      { title: "Good News", artist: "Shaboozey", genre: "country" },
+      { title: "I Never Lie", artist: "Zach Top", genre: "country" },
+      { title: "Southern Nights", artist: "Sullivan Fortner", genre: "jazz" },
+      { title: "Best Comedy Album: Nate Bargatze", artist: "Nate Bargatze", genre: "comedy" }
+    ];
+
+    const listDiv = document.getElementById("list");
+    songs.forEach(song => {
+      let div = document.createElement("div");
+      div.className = `item ${song.genre}`;
+      div.textContent = `${song.title} — ${song.artist}`;
+      listDiv.appendChild(div);
+    });
+
+    function filter(cat) {
+      let items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        if (cat === 'all' || item.classList.contains(cat)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
