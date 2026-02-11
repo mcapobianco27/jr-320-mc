@@ -1,6 +1,11 @@
 h1 {
     font-size: 1.5em;
 }
+
+h2 {
+    font-size: 1em;
+}
+
 #content {
     width:50%;
     margin:auto;
@@ -17,11 +22,12 @@ h1 {
     font-size: 0.75em;
 }
 
+/* mobile rules */
 @media (orientation:portrait) {
     #content {
         width: 100%;
     }
-/* font size bumped up from original submission to support mobile users */
+/* font size to support mobile users */
     body {
         font-size: 2.5em;
         /*2.5 em font size used for mobile users and readers */
