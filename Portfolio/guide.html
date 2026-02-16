@@ -1,0 +1,88 @@
+<body>
+  <div class="navbar">    
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="bio.html" class="nav-item">About</a>
+      <a href="map.html" class="nav-item">Spring Training Map</a>
+      <a href="guide.html" class="nav-item">Team Preview</a>
+    </div>
+    
+    <div class="nav-item hamburger">☰</div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger').onclick = () => {
+      document.querySelector('.nav-buttons').classList.toggle('active');
+    };
+  </script>
+
+<div id="content">
+    <h1> TEAM GUIDE </h1>
+</div>
+
+<div id="description">
+    Below are previews for each MLB team's upcoming 2026 season, from last year's analytics, key acquisitions and departures, and record predictions.
+</div>
+
+<html>
+<head>
+  <title>2026 Team Previews</title>
+  <style>
+    html, body { margin:0; padding:20px; height:100%; }
+    button { padding:5px 10px; margin:10px; font-size:18px}
+    
+    .team {
+      padding:15px; margin:10px 0;
+      font-size:20px; border-radius:5px;
+      background: black;
+      color: white;
+    }
+    
+    .team.hidden { display:none; }
+  </style>
+</head>
+<body>
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('aleast')">AL East</button>
+  <button onclick="filter('alcentral')">AL Central</button>
+  <button onclick="filter('alwest')">AL West</button>
+  <button onclick="filter('nleast')">NL East</button>
+  <button onclick="filter('nlcentral')">NL Central</button>
+  <button onclick="filter('nlwest')">NL West</button>
+  
+ 
+  <div id="list"></div>
+<!--make it so the buttons are highlighted based on genre-->
+
+ <details class="team aleast">
+    <summary>New York Yankees</summary>
+    <ul>
+      <li>Projected 92 wins</li>
+      <li>Strength: Bullpen depth</li>
+      <li>X-Factor: Young starting pitching</li>
+      <li>Big Question: Offensive consistency</li>
+    </ul>
+  </details>
+
+  <script>
+ function filter(category) {
+
+      const teams = document.querySelectorAll(".team");
+      const buttons = document.querySelectorAll("button");
+
+      // Highlight active button
+      buttons.forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+
+      teams.forEach(team => {
+        if (category === "all" || team.classList.contains(category)) {
+          team.classList.remove("hidden");
+        } else {
+          team.classList.add("hidden");
+          team.removeAttribute("open"); // closes dropdown if filtered out
+        }
+      });
+    }
+  </script>
+</body>
+</html>
