@@ -1,9 +1,9 @@
 h1 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
-#content {
-    width:85%;
+.content {
+    width:50%;
     margin:auto;
     /* don't want article to take up the entire screen, so 50% */
 }
@@ -14,52 +14,10 @@ h1 {
 
 /* Navbar */
 
-.navbar {
-  display: flex;
-  background: #004C66;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;
-  padding: 0 30px;
+div {
+  margin-bottom: 30px;
 }
 
-.navbar .logo img {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.navbar .nav-link {
-  padding: 10px 50px;
-  color: #333;
-  background-color: red;
-}
-
-
-/* Burger Navigation */
-
-.burger {
-  display: none;
-}
-
-.burger div {
-  width: 25px;
-  height: 2px;
-  background-color: #333;
-  margin: 5px;
-  border-radius: 25%;
-}
-
-@media (max-width: 813px) {
-  .nav-link {
-    position: absolute;
-    padding: none;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-  }
+#intro {
+    font-size: 2em;
 }
