@@ -3,7 +3,7 @@ h1 {
 }
 
 .content {
-    width:50%;
+    width:75%;
     margin:auto;
     /* don't want article to take up the entire screen, so 50% */
 }
@@ -20,4 +20,26 @@ div {
 
 #intro {
     font-size: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+
+}
+
+.image {
+
+}
+
+.youtube{
+    
 }
