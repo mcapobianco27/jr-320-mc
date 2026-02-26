@@ -21,7 +21,9 @@
   </script>
 
 <div class="content">
-    <h1> TEAM GUIDE </h1>
+<div style="display: flex; justify-content: center;">
+  <h1>MLB TEAM GUIDE</h1>
+</div>
 
 <div id="description">
     Below are previews for each MLB team's upcoming 2026 season, from last year's analytics, key acquisitions and departures, and record predictions.
@@ -37,8 +39,8 @@
     .team {
       padding:15px; margin:10px 0;
       font-size:20px; border-radius:5px;
-      background: black;
-      color: white;
+      background: white;
+      color: black;
     }
     
     .team.hidden { display:none; }
@@ -53,17 +55,17 @@
   <button onclick="filter('nlcentral')">NL Central</button>
   <button onclick="filter('nlwest')">NL West</button>
   
- <details class="team nlwest">
-    <summary>Arizona Diamondbacks</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
-  </details>
+ <details class="team nlwest diamondbacks">
+   <summary>Arizona Diamondbacks</summary>
+	<p> The Arizona Diamondbacks enter the 2026 season as a dark-horse playoff contender barring major injuries. Coming off of a disappointing 80-82 2025 campaign, the Snakes will look to find themselves back in postseason play. Veteran third baseman Nolan Arenado was added to the lineup over the offseason, which has the potential to be potent, headlined by Corbin Carroll, Geraldo Perdomo and Ketel Marte, the latter of whom signed a six-year, $116.5 million extension last April. If Merrill Kelly and Ryne Nelson can hold things down on the mound to start the season, the return of star pitcher Corbin Burnes would be extra-sweet. 
+   <ul>
+     <li>2025 Record: 80-82 (4th in NL West), missed playoffs</li>
+     <li>Player to Watch: Ryne Nelson</li>
+     <li>2026 Projected Win Total per Fangraphs: 81.6 (3rd in NL West)</li>
+   </ul>
+ </details>
 
-   <details class="team alwest">
+   <details class="team alwest athletics">
     <summary>Athletics</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -73,7 +75,7 @@
     </ul>
   </details>
 
- <details class="team nleast">
+ <details class="team nleast braves">
     <summary>Atlanta Braves</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -83,7 +85,7 @@
     </ul>
   </details>
   
-   <details class="team aleast">
+   <details class="team aleast orioles">
     <summary>Baltimore Orioles</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -93,7 +95,7 @@
     </ul>
   </details>
 
-   <details class="team aleast">
+   <details class="team aleast redsox">
     <summary>Boston Red Sox</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -103,7 +105,7 @@
     </ul>
   </details>
 
-   <details class="team nlcentral">
+   <details class="team nlcentral cubs">
     <summary>Chicago Cubs</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -113,7 +115,7 @@
     </ul>
   </details>
 
-   <details class="team alcentral">
+   <details class="team alcentral whitesox">
     <summary>Chicago White Sox</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -123,7 +125,7 @@
     </ul>
   </details>
 
-   <details class="team nlcentral">
+   <details class="team nlcentral reds">
     <summary>Cincinnati Reds</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -133,7 +135,7 @@
     </ul>
   </details>
 
-   <details class="team alcentral">
+   <details class="team alcentral guardians">
     <summary>Cleveland Guardians</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -143,7 +145,7 @@
     </ul>
   </details>
 
-   <details class="team nlwest">
+   <details class="team nlwest rockies">
     <summary>Colorado Rockies</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -153,7 +155,7 @@
     </ul>
   </details>
 
-   <details class="team alcentral">
+   <details class="team alcentral tigers">
     <summary>Detroit Tigers</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -163,7 +165,7 @@
     </ul>
   </details>
 
-   <details class="team alwest">
+   <details class="team alwest astros">
     <summary>Houston Astros</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -173,7 +175,7 @@
     </ul>
   </details>
 
-   <details class="team alcentral">
+   <details class="team alcentral royals">
     <summary>Kansas City Royals</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -183,7 +185,7 @@
     </ul>
   </details>
 
-   <details class="team alwest">
+   <details class="team alwest angels">
     <summary>Los Angeles Angels</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -193,7 +195,7 @@
     </ul>
   </details>
 
-   <details class="team nlwest">
+   <details class="team nlwest dodgers">
     <summary>Los Angeles Dodgers</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -203,7 +205,7 @@
     </ul>
   </details>
 
-   <details class="team nleast">
+   <details class="team nleast marlins">
     <summary>Miami Marlins</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -213,7 +215,7 @@
     </ul>
   </details>
 
-   <details class="team nlcentral">
+   <details class="team nlcentral brewers">
     <summary>Milwaukee Brewers</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -223,7 +225,7 @@
     </ul>
   </details>
 
-   <details class="team alcentral">
+   <details class="team alcentral twins">
     <summary>Minnesota Twins</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -233,7 +235,7 @@
     </ul>
   </details>
 
-   <details class="team nleast">
+   <details class="team nleast mets">
     <summary>New York Mets</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -243,7 +245,7 @@
     </ul>
   </details>
 
-   <details class="team aleast">
+   <details class="team aleast yankees">
     <summary>New York Yankees</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -253,7 +255,7 @@
     </ul>
   </details>
 
-   <details class="team nleast">
+   <details class="team nleast phillies">
     <summary>Philadelphia Phillies</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -263,7 +265,7 @@
     </ul>
   </details>
 
-   <details class="team nlcentral">
+   <details class="team nlcentral pirates">
     <summary>Pittsburgh Pirates</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -273,7 +275,7 @@
     </ul>
   </details>
 
-   <details class="team nlwest">
+   <details class="team nlwest padres">
     <summary>San Diego Padres</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -283,7 +285,7 @@
     </ul>
   </details>
 
-   <details class="team nlwest">
+   <details class="team nlwest giants">
     <summary>San Francisco Giants</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -293,7 +295,7 @@
     </ul>
   </details>
 
-   <details class="team alwest">
+   <details class="team alwest mariners">
     <summary>Seattle Mariners</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -303,7 +305,7 @@
     </ul>
   </details>
 
-   <details class="team nlcentral">
+   <details class="team nlcentral cardinals">
     <summary>St. Louis Cardinals</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -313,7 +315,7 @@
     </ul>
   </details>
 
-   <details class="team aleast">
+   <details class="team aleast rays">
     <summary>Tampa Bay Rays</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -323,7 +325,7 @@
     </ul>
   </details>
 
-   <details class="team alwest">
+   <details class="team alwest rangers">
     <summary>Texas Rangers</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -333,7 +335,7 @@
     </ul>
   </details>
 
-   <details class="team aleast">
+   <details class="team aleast bluejays">
     <summary>Toronto Blue Jays</summary>
     <ul>
       <li>Projected 92 wins</li>
@@ -343,7 +345,7 @@
     </ul>
   </details>
 
-   <details class="team nleast">
+   <details class="team nleast nationals">
     <summary>Washington Nationals</summary>
     <ul>
       <li>Projected 92 wins</li>

@@ -1,5 +1,6 @@
 h1 {
     font-size: 2em;
+    align-items: center
 }
 
 .content {
@@ -14,32 +15,138 @@ h1 {
 
 /* Navbar */
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #041E42;
+  padding: 15px 30px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  color: #e63946;
+}
+
 div {
   margin-bottom: 30px;
 }
 
 #intro {
-    font-size: 2em;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 18px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  margin: 10px;
+  padding: 20px;
 }
 
 .section {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.image{
+  flex: 1 100px;
+  width: 25%
+}
+
+.youtubecontainer {
+    flex: 1 100px;
+   position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .text {
-
+  flex: 1 100px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-.image {
-
+.name {
+    font-size: 2em;
 }
 
-.youtube{
-    
+.docname {
+    font-size: 1.5em;
+    font-style: italic;
 }
+
+/* Base summary button styles */
+details summary {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white; /* keeps font black for all */
+  list-style: none;
+  border: none;
+  outline: none
+  ;
+}
+
+/* ── AL East ── */
+.diamondbacks summary { background-color: #A71930; }
+.athletics summary  { background-color: #003831; }
+.braves summary  { background-color: #CE1141; }
+.orioles summary  { background-color: #DF4601; }
+.redsox summary  { background-color: #BD3039; }
+.cubs summary  { background-color: #002F6C; }
+.whitesox summary  { background-color: #000000; }
+.reds summary  { background-color: #C6011F; }
+.guardians summary  { background-color: #E31937; }
+.rockies summary  { background-color: #33006F; }
+.tigers summary  { background-color: #0C2340; }
+.astros summary  { background-color: #002D62; }
+.royals summary  { background-color: #004687; }
+.angels summary  { background-color: #BA0021; }
+.dodgers summary  { background-color: #005A9C; }
+.marlins summary  { background-color: #00A3E0; }
+.brewers summary  { background-color: #12284B; }
+.twins summary  { background-color: #D31145; }
+.mets summary  { background-color: #FF5910; }
+.yankees summary  { background-color: #0C2340; }
+.phillies summary  { background-color: #E81828; }
+.pirates summary  { background-color: #000000; }
+.padres summary  { background-color: #2F241D; }
+.giants summary  { background-color: #FD5A1E; }
+.mariners summary  { background-color: #0C2C56; }
+.cardinals summary  { background-color: #C41E3A; }
+.rays summary  { background-color: #8FBCE6; }
+.rangers summary  { background-color: #003278; }
+.bluejays summary  { background-color: #134A8E; }
+.nationals summary  { background-color: #AB0003; }
+
+.
