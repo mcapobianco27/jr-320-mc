@@ -11,12 +11,12 @@
       <a href="index.html" class="nav-item">Home</a>
       <a href="bio.html" class="nav-item">About Me</a>
       <a href="map.html" class="nav-item">Spring Training Map</a>
-      <a href="guide.html" class="nav-item">Team Preview</a>
+      <a href="guide.html" class="nav-item">Team Previews</a>
     </div>
-    
+    <!--this part up above is to link the different pages to each other. I put this exact block of code in each of the four html files associated with this project-->
     <div class="nav-item hamburger">☰</div>
   </div>
-
+<!--the code below is to enable the hamburger feature for viewers to have a display to actually click on to arrive at the different pages-->
   <script>
     document.querySelector('.hamburger').onclick = () => {
       document.querySelector('.nav-buttons').classList.toggle('active');
@@ -24,10 +24,13 @@
   </script>
 
   <div id="intro">
-    Welcome to the 2026 MLB preview page, an interactive site for baseball fans to learn more about their favorite teams heading into the regular season. Click around to find information about roster additions and departures, key analytics, record predictions, and spring training facilities.
+    Welcome to the 2026 MLB preview page, an interactive site for baseball fans to learn more about their favorite teams heading into the regular season. Click around the menu above to find information about each team's roster construction, see where Spring Training games are being played this spring, and see more of my work!
 </div>
 
-<div>
-    <img src="logo.png"
-        width="75%" alt="MLB Logo"/>
-       <!--alt used if photo doesn't work on a device, written in a descriptive way-->
+<div style="text-align: center;">
+    <img src="fieldpic.jpg"
+      width="75%" alt="Globe Life Field gets set to host MLB action."/> <!--the jpg file is backed up into the Github repository as well-->
+         <div class="caption">MLB fans pack a stadium in Arlington, Texas to watch the Texas Rangers. <span class="credit">Credit: Ministry of Sport </span></div>
+         <p>Having trouble seeing this image? <a href="fieldpic.jpg" download>Download a copy of the image here.</a></p>
+       <!--alt feature is used in case a photo doesn't work on a device, the reader still knows what the photo generally is-->
+</div>

@@ -1,19 +1,18 @@
 h1 {
     font-size: 2em;
-    align-items: center
+    text-align: center
 }
 
 .content {
     width:75%;
     margin:auto;
-    /* don't want article to take up the entire screen, so 50% */
+    /* don't want article to take up the entire screen, so 75 for laptop% */
 }
 #byline {
     font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
 }
-/* list of fonts...first font is preferred but if comp doesnt have then it defaults to next */
 
-/* Navbar */
+/* code for the navbar */
 
 .navbar {
   display: flex;
@@ -32,13 +31,19 @@ h1 {
   color: white;
   font-weight: 600;
 }
-
+/* the hover code makes it so users can see another color of the MLB logo when they hover over one of the tabs in the hamburger menu */
 .nav-item:hover {
   color: #e63946;
 }
 
 div {
   margin-bottom: 30px;
+}
+
+.caption{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
 #intro {
@@ -48,7 +53,7 @@ div {
   line-height: 1.6;
   font-size: 18px;
 }
-
+/* container set in column direction to bring the entire bio page moving down */
 .container {
   display: flex;
   flex-direction: column;
@@ -56,35 +61,31 @@ div {
   margin: 10px;
   padding: 20px;
 }
-
+/* used row flex direction to make sure that the youtube and image frames are to the left of the text (horizontal axis) */
 .section {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
-  gap: 20px;
+  gap: 55px;
 }
 
 .image{
-  flex: 1 100px;
+  flex: 0 0 25%;
   width: 25%
 }
 
 .youtubecontainer {
-    flex: 1 100px;
-   position: relative;
+  flex: 0 40%;
+  position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  aspect-ratio: 16 / 9; /* aspect ratio that corresponds with Youtube sizing */
 }
-
-/* Then style the iframe to fit in the container div with full height and width */
 .responsive-iframe {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -104,20 +105,34 @@ div {
     font-style: italic;
 }
 
-/* Base summary button styles */
+.description {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.5em;
+}
+
+.mapcontainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* button details */
 details summary {
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: bold;
-  color: white; /* keeps font black for all */
+  color: white;
   list-style: none;
   border: none;
   outline: none
   ;
 }
 
-/* ── AL East ── */
+/* because I made each team have its own class, I styled each team with its official color code */
 .diamondbacks summary { background-color: #A71930; }
 .athletics summary  { background-color: #003831; }
 .braves summary  { background-color: #CE1141; }
@@ -149,4 +164,33 @@ details summary {
 .bluejays summary  { background-color: #134A8E; }
 .nationals summary  { background-color: #AB0003; }
 
-.
+/* mobile rules */
+@media (orientation:portrait) {
+    #content {
+        width: 100%;
+    }
+/* font size to support mobile users */
+    body {
+        font-size: 2em;
+    }
+.nav-item {
+        font-size: 14px;
+  }
+  .caption {
+    font-size: 0.5em;
+    /* the caption was coming out much bigger than the description in the index page, so I bumped the font size down to make it look more natural for mobile users*/
+}
+  .section {
+    flex-direction: column;
+  }
+  /*for the about me section, the above code will take away the two-column layout that I have for desktop, and the code below will center my first image*/
+  .image {
+    flex: 0 0 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+  .description {
+    font-size: 1em;
+  }
+}

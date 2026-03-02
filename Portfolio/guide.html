@@ -8,7 +8,7 @@
       <a href="index.html" class="nav-item">Home</a>
       <a href="bio.html" class="nav-item">About Me</a>
       <a href="map.html" class="nav-item">Spring Training Map</a>
-      <a href="guide.html" class="nav-item">Team Preview</a>
+      <a href="guide.html" class="nav-item">Team Previews</a>
     </div>
     
     <div class="nav-item hamburger">☰</div>
@@ -20,21 +20,22 @@
     };
   </script>
 
-<div class="content">
+
 <div style="display: flex; justify-content: center;">
   <h1>MLB TEAM GUIDE</h1>
 </div>
 
-<div id="description">
-    Below are previews for each MLB team's upcoming 2026 season, from last year's analytics, key acquisitions and departures, and record predictions.
+<div class="description">
+    Click on each team's button to read a preview for their upcoming season, which includes notes on key acquisitions and departures, strengths and weaknesses, projected win totals, and league trends. 
 </div>
 
 <div>
 <head>
-  <title>2026 Team Previews</title>
-  <style>
-    html, body { margin:0; padding:20px; height:100%; }
-    button { padding:5px 10px; margin:10px; font-size:18px}
+  <title>2026 Team Previews</title> <!--the code below is sample code provided from the Java lab. I switched some of numbers around on padding and margin to ensure the shape and style that I want-->
+  <style> 
+    html, body { margin:0; padding:10px 20px; height:100%; }
+    button { padding: 10px 10px; margin:10px; font-size:18px;}
+    body {text-align: center}
     
     .team {
       padding:15px; margin:10px 0;
@@ -42,8 +43,16 @@
       background: white;
       color: black;
     }
-    
+
     .team.hidden { display:none; }
+    
+     @media (orientation:portrait) {
+        .team {
+            font-size: 28px;
+            padding: 20px;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -54,10 +63,10 @@
   <button onclick="filter('nleast')">NL East</button>
   <button onclick="filter('nlcentral')">NL Central</button>
   <button onclick="filter('nlwest')">NL West</button>
-  
+  <!--To code the majority of this section, I used the summary details feature which we discussed in class. I assigned each team to its own class for CSS styling purposes (specifically FlexBox)-->
  <details class="team nlwest diamondbacks">
    <summary>Arizona Diamondbacks</summary>
-	<p> The Arizona Diamondbacks enter the 2026 season as a dark-horse playoff contender barring major injuries. Coming off of a disappointing 80-82 2025 campaign, the Snakes will look to find themselves back in postseason play. Veteran third baseman Nolan Arenado was added to the lineup over the offseason, which has the potential to be potent, headlined by Corbin Carroll, Geraldo Perdomo and Ketel Marte, the latter of whom signed a six-year, $116.5 million extension last April. If Merrill Kelly and Ryne Nelson can hold things down on the mound to start the season, the return of star pitcher Corbin Burnes would be extra-sweet. 
+	<p> The Arizona Diamondbacks enter the 2026 season as a dark-horse playoff contender barring major injuries. Coming off of a disappointing 80-82 2025 campaign, the Snakes will look to find themselves back in postseason play. Veteran third baseman Nolan Arenado was added to the lineup over the offseason, which has potent potential, headlined by Corbin Carroll, Geraldo Perdomo and Ketel Marte, the latter of whom signed a six-year, $116.5 million extension last April. If Merrill Kelly and Ryne Nelson can hold things down on the mound to start the season, the return of star pitcher Corbin Burnes would be extra-sweet. 
    <ul>
      <li>2025 Record: 80-82 (4th in NL West), missed playoffs</li>
      <li>Player to Watch: Ryne Nelson</li>
@@ -67,294 +76,297 @@
 
    <details class="team alwest athletics">
     <summary>Athletics</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
-  </details>
+    <p> The Athletics will call Sacramento their home for the second straight season as the franchise awaits a permanent move to Las Vegas. As one of the youngest teams in the league, the A's have an electrifying offense, headlined by the likes of Nick Kurtz, Jacob Wilson, Lawrence Butler and Shea Langeliers. The team also brought in veteran second baseman Jeff McNeill from the Mets to add some experience. While their offense is capable of true damage, their starting pitching rotation ranks among some one of the worst in the majors, and without any significant mid-season moves, it's hard to believe this team can compete for a wild card spot in the American League.
+   <ul>
+     <li>2025 Record: 76-86, 4th in AL West, missed playoffs</li>
+     <li>Player to Watch: Tyler Soderstrom</li>
+     <li>2026 Projected Win Total per FanGraphs: 78.7 (4th in AL West)</li>
+   </ul>
+ </details>
+
 
  <details class="team nleast braves">
     <summary>Atlanta Braves</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
-  </details>
+  <p> The Braves are arguably the best candidate to have a major bounce-back season in 2026. Last year was one to forget for Atlanta, as they battled injuries and a horrendous start, which faded their postseason hopes after just a couple of months. Stars Ronald Acuna Jr. and Austin Riley are reportedly feeling fully healthy, and Jurickson Profar returns to a star-studded lineup after serving a PED suspension. With starter Spencer Schwellenbach on the 60-day IL with an elbow injury, the Braves' starting pitching is currently thin, but they struck gold by landing former Padres standout closer Robert Suarez. If the Braves stay healthy for a full season, expect to see them in the hunt for the NL pennant in October.
+   <ul>
+     <li>2025 Record: 76-86, 4th in NL East, missed playoffs</li>
+     <li>Player to Watch: Drake Baldwin</li>
+     <li>2026 Projected Win Total per FanGraphs: 90.6 (1st in NL East)</li>
+   </ul>
+ </details>
+
   
    <details class="team aleast orioles">
     <summary>Baltimore Orioles</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
-  </details>
+     <p> The Orioles made a splash in free agency, signing first baseman Pete Alonso to a five-year, $155 million deal, which marks the biggest free agent signing in the franchise's history. The slugger was just one of several big moves for a team looking to return to the playoffs after a 2025 season to forget. Andrew Kittredge and Ryan Helsley will join the bullpen, with Helsley looking to return to his old form after a dreadful two-month spell with the Mets last season. Shane Baz and Chris Bassitt are also joining the pitching staff, adding depth to a now formidable starting rotation. While the AL East will be a gauntlet, don't be surprised if the Orioles find themselves back in October. 
+   <ul>
+     <li>2025 Record: 75-87, 5th in AL East, missed playoffs</li>
+     <li>Player to Watch: Ryan Helsley</li>
+     <li>2026 Projected Win Total per FanGraphs: 83.5 (4th in AL East)</li>
+   </ul>
+ </details>
+
 
    <details class="team aleast redsox">
     <summary>Boston Red Sox</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+   <p> The Red Sox failed to retain Alex Bregman or land one of the major free-agent bats, but filled in some gaps in their offense, with Willson Contreras, Isiah Kiner-Falefa and Caleb Durbin. Up-and-coming outfielder Roman Anthony is set to have his first full season in the big leagues, which should bolster one of last year's weaker offenses. Boston added starters Sonny Gray and Ranger Suarez to a rotation headlined by one of the game's premier aces, Garrett Crochet. It will be no easy task to contend in a loaded AL East, but the Red Sox are in position to return to the postseason.
+   <ul>
+     <li>2025 Record: 89-73, 3rd in AL East, eliminated in Wild Card Series</li>
+     <li>Player to Watch: Connelly Early</li>
+     <li>2026 Projected Win Total per FanGraphs: 84.5 (3rd in AL East)</li>
+   </ul>
   </details>
 
    <details class="team nlcentral cubs">
     <summary>Chicago Cubs</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+      <p> The NL Central feels open for the Cubs' taking this season, after finishing second behind Milwaukee in 2025. Chicago's major moves were signing veteran third baseman Alex Bregman to a 5-year, $175 million contract and trading for Marlins starter Edward Cabrera. Despite losing star outfielder Kyle Tucker, the Cubs' offense should be more than formidable this season, and the team is much deeper. The Cubs also reinforced their bullpen, bringing in the likes of Phil Maton and Jacob Webb. If all goes right, the Cubbies should coast to an NL Central division title, and will be a force to be reckoned with in October.
+      <ul>
+     <li>2025 Record: 92-70, 2nd in NL Central, eliminated in NLDS</li>
+     <li>Player to Watch: Edward Cabrera</li>
+     <li>2026 Projected Win Total per FanGraphs: 85.9 (1st in NL Central)</li>
+   </ul>
   </details>
 
    <details class="team alcentral whitesox">
     <summary>Chicago White Sox</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+    <p> White Sox General Manager Chris Getz turned a page this offseason with a few cost-effective moves that set the franchise up for some much-needed future success. While the White Sox are still one of the worst teams in the league, new signee Munetaka Murakami from Japan will bolster the offense with home run pop. Chicago also signed pitchers Seranthony Dominguez and Anthony Kay to two-year deals, and traded for hard-throwing right-hander Jordan Hicks from the Red Sox. The biggest move was trading outfielder Luis Robert Jr. to the Mets for Luisangel Acuna and other prospects, which should give the team more financial flexibility moving forward. It will still be some time before White Sox fans experience positive results, but this isn't the same team that set the record for most single-season losses in MLB history just two years ago.
+   <ul>
+     <li>2025 Record: 60-62, 5th in AL Central, missed playoffs</li>
+     <li>Player to Watch: Munetaka Murakami </li>
+     <li>2026 Projected Win Total per FanGraphs: 70.3 (5th in AL Central)</li>
+   </ul>
   </details>
 
    <details class="team nlcentral reds">
     <summary>Cincinnati Reds</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+    <p> The Reds struck big in the later weeks of free agency when they signed third baseman Eugenio Suarez, who once played for Cincinnati and slugged 49 home runs last season. 2025 was a sign of optimism for the young Reds, as they snuck into the last Wild Card slot and earned a trip to the postseason. Cincinnati will look to build on last year's success, with many eyes on ace Hunter Greene. The Reds also brought back closer Emilio Pagan, but lost Nick Martinez, who appeared in more than 40 games last season, both as a starter and in relief. It's still a young team, but Suarez adds power that the offense desperately needs to go back to October.
+   <ul>
+     <li>2025 Record: 83-79, 3rd in NL Central, eliminated in Wild Card series</li>
+     <li>Player to Watch: Chase Burns </li>
+     <li>2026 Projected Win Total per FanGraphs: 79.9 (4th in NL Central)</li>
+   </ul>
   </details>
 
    <details class="team alcentral guardians">
     <summary>Cleveland Guardians</summary>
+    <p> After the Guardians strung together an incredible run towards the end of last season to win the division, hopes remained high. However, Cleveland had a quiet offseason, while many other AL teams improved significantly. On the bright side, the Guardians extended star third baseman Jose Ramirez for seven years, and avoided arbitration with outfielder Steven Kwan, whose future is murky. They also added Shawn Armonstrong to the bullpen, who pitched to a 2.31 ERA last year with the Rangers. However, new signing Rhys Hoskins' offensive consistencies raise questions as to whether this team has enough power to compete in the playoffs.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 88-74, 1st in AL Central, eliminated in Wild Card series</li>
+     <li>Player to Watch: Shawn Armstrong </li>
+     <li>2026 Projected Win Total per FanGraphs: 72.6 (4th in NL Central)</li>
     </ul>
   </details>
 
    <details class="team nlwest rockies">
     <summary>Colorado Rockies</summary>
+   <p> The Rockies were the MLB's worst team last season, and likely could finish with the same fate in 2026. They are financially disadvantaged, and the NL West is full of talent. However, the Rockies were aggressive this offseason, adding starters Tomoyuki Sugano, Michael Lorenzen and Jose Quintana to their starting rotation in free agency. The Rockies also traded for outfielder Jake McCarthy from the Diamondbacks, which should boost the outfield defense in a hitter-friendly Coors Field. The depth and talent simply aren't there yet to compete for a playoff spot, but the Rockies should perform better than their abysmal 2025 campaign.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 43-119, 5th in NL West, missed playoffs</li>
+     <li>Player to Watch: Brenton Doyle </li>
+     <li>2026 Projected Win Total per FanGraphs: 63.8 (5th in NL West)</li>
     </ul>
   </details>
 
    <details class="team alcentral tigers">
     <summary>Detroit Tigers</summary>
+    <p> It's hard to discuss the state of the Detroit Tigers without acknowledging the fact that it might be back-to-back CY Young winner Tarik Skubal's final season with the team. Heading into his last year of his contract, Skubal will look to stay healthy and earn himself a well-deserved contract of an enormous scale. The Tigers simply cannot compete with the money from the Mets and the Dodgers. However, the Tigers signed one of the best free-agent pitchers this offseason, Framber Valdez, to a three-year, $115 million deal. Skubal and Valdez are set to be an elite 1-2 punch which can take the Tigers far in the postseason, but Detroit will need to rely on its position players hitting at a consistent level all season.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 87-75, 2nd in AL Central, eliminated in ALDS</li>
+     <li>Player to Watch: Dillon Dingler  </li>
+     <li>2026 Projected Win Total per FanGraphs: 85.3 (1st in AL Central)</li>
     </ul>
   </details>
 
    <details class="team alwest astros">
     <summary>Houston Astros</summary>
+    <p> The Astros snapped their streak of eight consecutive playoff appearances last season as they finished just shy of the third Wild Card spot. Rather than pursuing an aggressive offseason strategy, it was a quiet one for Houston, who finds itself with a similar roster to last season. The biggest loss is starter Framber Valdez, but Houston swooped in and signed Japanese starter Tatsuya Imai to a three-year deal. The offense, led by a healthy Yordan Alvarez, still has the potential of being lethal, but with starting pitching injuries, it seems inevitable that the Astros will need to make some trades if they want to return to their old selves.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 87-75, 2nd in AL West, missed playoffs</li>
+     <li>Player to Watch: Cam Smith  </li>
+     <li>2026 Projected Win Total per FanGraphs: 81.1 (3rd in AL West)</li>
     </ul>
   </details>
 
    <details class="team alcentral royals">
     <summary>Kansas City Royals</summary>
+    <p> The Royals will look to return to the postseason after missing out last year following a mediocre 82-win season. Kansas City successfully retained its core, extending Maikel Garcia for five years and re-signing Vinnie Pasquantino for two years. The Royals also got deeper, adding young outfielder Isaac Collins from the Brewers and signing veteran outfielder Starling Marte. The addition of reliever Matt Strahm gives Kansas City a rock-solid backend of the bullpen, and in a weak AL Central, the Royals could find themselves near the top.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 82-80, 3rd in AL Central, missed playoffs</li>
+     <li>Player to Watch: Isaac Collins   </li>
+     <li>2026 Projected Win Total per FanGraphs: 78.2 (2nd in AL Central)</li>
     </ul>
   </details>
 
    <details class="team alwest angels">
     <summary>Los Angeles Angels</summary>
+    <p> Owners of the longest active playoff drought in the majors, the Angels are set for another year of disappointing after a lackluster offseason. The Angels will bank on newcomers Grayson Rodriguez and Alek Manoah to give its starting rotation a boost, but each come with their own risks. The team brought in infielder Vaughn Grissom and brought back Yoan Moncada, but neither moves were major. The Angels simply aren't talented enough to compete in 2026, and Mike Trout seems destined to skip out on the playoffs for another year. 
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 72-90, 5th in AL West, missed playoffs</li>
+     <li>Player to Watch: Reid Detmers   </li>
+     <li>2026 Projected Win Total per FanGraphs: 71.8 (5th in AL West)</li>
     </ul>
   </details>
 
    <details class="team nlwest dodgers">
     <summary>Los Angeles Dodgers</summary>
+    <p> The reigning two-time World Series champs showed no signs of slowing down this winter, signing star outfielder Kyle Tucker to a massive, four-year, $260 million deal in free agency, and star closer Edwin Diaz. It's a team with almost no flaws looking to be the first team since the 2000 Yankees to three-peat. Roki Sasaki will be a name to monitor as he looks to find success as a starter for a full season. If the Dodgers stay healthy, it's difficult to bet against them lifting the trophy at the end of October.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 93-69, 1st in NL West, won World Series</li>
+     <li>Player to Watch: Gavin Stone   </li>
+     <li>2026 Projected Win Total per FanGraphs: 101.7 (1st in NL West)</li>
     </ul>
   </details>
 
    <details class="team nleast marlins">
     <summary>Miami Marlins</summary>
+    <p> The Marlins surprised some fans last season, winning 79 games and avoiding a last-place finish in a tough NL East. The Marlins traded away Edward Cabrera and Ryan Weathers in return for prospects, some which should be league-ready as early as this season. Christopher Morel should boost the Marlins' offense, and closer Pete Fairbanks is a solid addition to the bullpen, but Miami likely won't have enoguh to be competitive in their division. For the Marlins, it's the long-term prospects that give the most optimism.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 79-83, 3rd in NL East, missed playoffs</li>
+     <li>Player to Watch: Owen Caissie </li>
+     <li>2026 Projected Win Total per FanGraphs: 75.0 (4th in NL East)</li>
     </ul>
   </details>
 
    <details class="team nlcentral brewers">
     <summary>Milwaukee Brewers</summary>
+    <p> The 2026 Brewers will look a lot different from the 2025 Brewers who finished with a league-most 97 regular season wins, as they traded away ace Freddy Peralta, infielder Caleb Durbin, and outfielder Isaac Collins. Milwaukee got a sizable return from the Mets in the Peralta trade, headlined by prospects Brandon Sproat and Jett Williams, as the former will get a chance at earning a spot in the Brewers' rotation. Bringing back veteran starter Brandon Woodruff was the right move for Milwaukee, but with the Cubs making big splashes, it's more likely to find this team in the Wild Card hunt this season.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 97-65, 1st in NL Central, eliminated in NLCS</li>
+     <li>Player to Watch: Brandon Sproat </li>
+     <li>2026 Projected Win Total per FanGraphs: 83.4 (2nd in NL Central)</li>
     </ul>
   </details>
 
    <details class="team alcentral twins">
     <summary>Minnesota Twins</summary>
+    <p> The biggest storyline for the Twins heading into 2026 isn't on the field, but off the field. Twins owner Tom Pohlad, according to reports, plans to be involved in day-to-day operations, a move which will likely be a distraction for a reeling franchise which will cut $50 million from its payroll. The Twins still have some talent in Joe Ryan, Byron Buxton, and Pablo Lopez, but they lack significant depth, and at this point, should commit to a full rebuild. Don't expect the Twins to be anywhere near the postseason hunt this year.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 70-92, 4th in AL Central, missed playoffs</li>
+     <li>Player to Watch: Luke Keaschall </li>
+     <li>2026 Projected Win Total per FanGraphs: 77.0 (3rd in AL Central)</li>
     </ul>
   </details>
 
    <details class="team nleast mets">
     <summary>New York Mets</summary>
+    <p> The Mets had one of the busiest offseasons in the majors, bringing in ace Freddy Peralta, infielders Bo Bichette, Marcus Semien, and Jorge Polanco, relievers Devin Williams and Luke Weaver, and outfielder Luis Robert Jr. However, with all of the acquisitions came some very notable departures, including star first baseman Pete Alonso, closer Edwin Diaz, and outfielder Brandon Nimmo. New York underperformed last season, missing the playoffs with one of the highest payrolls in baseball. Superstar outfielder Juan Soto has his eyes on the MVP, and if this team stays healthy, they are a force to be reckoned with in the National League.
     <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
+      <li>2025 Record: 83-79, 2nd in NL East, missed playoffs</li>
+     <li>Player to Watch: Francisco Alvarez </li>
+     <li>2026 Projected Win Total per FanGraphs: 88.9 (2nd in NL East)</li>
     </ul>
   </details>
 
    <details class="team aleast yankees">
     <summary>New York Yankees</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> For as long as Aaron Judge is healthy, the Yankees find themselves right at the top of the American League. But at 34 years old, Judge isn’t getting any younger, and the Yankees’ window is closing fast. The Bronx Bombers are returning the majority of their 2025 team, including free agents Cody Bellinger and Paul Goldschmidt. Offensive output shouldn’t be an issue for the Bronx Bombers, who finished as baseball’s top offense last season. It was pitching, rather, that held the Yankees back, but things should trend upward as former Cy Young winner Gerrit Cole is set to return from Tommy John, where he’ll rejoin a loaded rotation of Max Fried, Carlos Rodon and Cam Schlittler. If the Yankees stay healthy and bolster their bullpen by the trade deadline, they should be well on their way back into contention for their 28th World Series.
+   <ul>
+     <li>2025 Record: 94-68, 2nd in AL East, eliminated in ALDS</li>
+     <li>Player to Watch: Ben Rice</li>
+     <li>2026 Projected Win Total per FanGraphs: 86.4 (1st in AL East)</li>
+   </ul>
   </details>
 
    <details class="team nleast phillies">
     <summary>Philadelphia Phillies</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+    <p> Time is ticking for this era of Phillies baseball, and they'll attempt to run it back again in 2026 after falling to the Dodgers in the NLDS. The Phillies brought back two of their biggest bats in Kyle Schwarber and J.T. Realmuto, and signed outfielder Adolis Garcia to replace Nick Castellanos, who was released. It's a very similar roster to the team that won 96 games last season, and if the Phillies stay healthy, 2026 may finally be the year they put it together and win the World Series.
+   <ul>
+     <li>2025 Record: 96-66, 1st in NL East, eliminated in NLDS</li>
+     <li>Player to Watch: Justin Crawford</li>
+     <li>2026 Projected Win Total per FanGraphs: 90.1 (1st in NL East)</li>
+   </ul>
   </details>
 
    <details class="team nlcentral pirates">
     <summary>Pittsburgh Pirates</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Pirates must be feeling the pressure of keeping superstar pitcher Paul Skenes happy, because the team had one of the best and most aggressive offseasons in the majors. Pittsburgh was one of the worst offenses in the MLB last season, and will look to turn the tide around by signing Ryan O'Hearn for two years and trading for Brandon Lowe, who hit 31 home runs last year in his all-star campaign. While the National League is quite competitive, the Pirates may be a sneaky candidate to snatch the final wild-card spot.
+   <ul>
+     <li>2025 Record: 71-91, 5th in NL Central, missed playoffs</li>
+     <li>Player to Watch: Jared Jones</li>
+     <li>2026 Projected Win Total per FanGraphs: 82.9 (3rd in NL Central)</li>
+   </ul>
   </details>
 
    <details class="team nlwest padres">
     <summary>San Diego Padres</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Padres come into 2026 projected to finish fourth in the NL West, despite having a core of Fernando Tatis Jr., Manny Machado, Jackson Merrill, and Mason Miller, among others. While their is no shortage of talent in San Diego, the Padres lost Dylan Cease, Ryan O'Hearn, Luis Arraez and Robert Suarez in the offseason. The team is still good enough to compete for a spot in the NL West, but they'll need an extra boost from their new additions in Miguel Andujar and Nick Castellanos in order to topple the Dodgers.
+   <ul>
+     <li>2025 Record: 90-72, 2nd in NL West, eliminated in Wild Card series</li>
+     <li>Player to Watch: Miguel Andujar </li>
+     <li>2026 Projected Win Total per FanGraphs: 79.3 (4th in NL West)</li>
+   </ul>
   </details>
 
    <details class="team nlwest giants">
     <summary>San Francisco Giants</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+    <p> The Giants failed to make a splash this offseason, and instead chose to prioritize pitching depth in Adrian Houser and Tyler Mahle. Second baseman Luis Arraez should have a positive impact at the top of the order, but the Giants needed to make more moves. With Giants legend Buster Posey at the helm as president of baseball operations, the team is expected to cut some costs and avoid large deals at the moment. If the Giants get well-rounded production from their capable lineup, they could sneak into a playoff spot, but health remains a red flag.
+   <ul>
+     <li>2025 Record: 81-81, 3rd in NL West, missed playoffs</li>
+     <li>Player to Watch: Luis Arraez</li>
+     <li>2026 Projected Win Total per FanGraphs: 81.1 (2nd in NL West)</li>
+   </ul>
   </details>
 
    <details class="team alwest mariners">
     <summary>Seattle Mariners</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Mariners won the AL West for the first time since 2001 last season, and were one game short of the World Series. This is a talented and confident squad that headlined its offseason with a trade for Cardinals infielder Brendan Donovan, one of the more underrated players in baseball. Seattle re-signed its big trade deadline acquisition, Josh Naylor, to a five-year, $92.5 million deal, a move that was essential. Luis Castillo, Logan Gilbert, and Bryan Woo will once again lead the starting rotation and AL MVP runner-up Cal Raleigh will look to repeat last year's success as the Mariners chase a championship.
+   <ul>
+     <li>2025 Record: 90-72, 1st in AL West, eliminated in ALCS</li>
+     <li>Player to Watch: Brendan Donovan</li>
+     <li>2026 Projected Win Total per FanGraphs: 87.4 (1st in NL West)</li>
+   </ul>
   </details>
 
    <details class="team nlcentral cardinals">
     <summary>St. Louis Cardinals</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Cardinals are in rebuild mode, and wasted no time shedding large veteran salaries at the beginning of the offseason. Dustin May and Ryne Stanek are exciting additions to the Cardinals' pitching staff, and the Cardinals have some talent knocking on the door that could have an impact as soon as Opening Day. Don't expect the Cardinals to be very competitive in 2026, but the offseason was an important step for their rebuild.
+   <ul>
+     <li>2025 Record: 78-84, 4th in NL Central, missed playoffs</li>
+     <li>Player to Watch: Thomas Saggese </li>
+     <li>2026 Projected Win Total per FanGraphs: 75.1 (5th in NL Central)</li>
+   </ul>
   </details>
 
    <details class="team aleast rays">
     <summary>Tampa Bay Rays</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> After an especially rough 2025 season at the plate, the Rays were extremely busy this offseason, being involved with over 10 trades. The Rays parted ways with some of their veterans such as Brandon Lowe and Shane Baz, and brought in Cedric Mullins and Gavin Lux to reinforce the offense. The Rays operated in their usual cost-efficient ways, shedding payroll and hoarding prospects for the future. This is a team that will have a hard time competing right now in the talented AL East.
+   <ul>
+     <li>2025 Record: 77-85, 4th in AL East, missed playoffs</li>
+     <li>Player to Watch: Jonathan Aranda </li>
+     <li>2026 Projected Win Total per FanGraphs: 75.6 (5th in AL East)</li>
+   </ul>
   </details>
 
    <details class="team alwest rangers">
     <summary>Texas Rangers</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Rangers will look to get back to the postseason after a disappointing 2025 season where they won just 81 games. The 2023 World Series champions still have a talented roster, led by shortstop Corey Seager, Wyatt Langford and Josh Jung. While the Rangers parted ways with Marcus Semien and Adolis Garcia, they acquired outfielder Brandon Nimmo from the Mets in order to generate more traffic on the basepaths. Another big splash came when Texas traded for starter MacKenzie Gore, whos durability could be an X-factor if this team wants to go on a run.
+   <ul>
+     <li>2025 Record: 81-81, 3rd in AL West, missed playoffs</li>
+     <li>Player to Watch: Wyatt Langford </li>
+     <li>2026 Projected Win Total per FanGraphs: 84.1 (2nd in AL West)</li>
+   </ul>
   </details>
 
    <details class="team aleast bluejays">
     <summary>Toronto Blue Jays</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Blue Jays were inches, yes, inches away from winning the 2025 World Series. The reigning AL champs lost Bo Bichette in free agency but signed Kazuma Okamoto from the NPB to playin the infield. The biggest move that the Jays made was signing starter Dylan Cease to a 7-year, $210 million contract, which, given Cease's injury history and inconsistency, could be a boom-or-bust move. However, this team is loaded with talent and is deeper than it was last year, and should me right back in the mix to contend for a World Series again.
+   <ul>
+     <li>2025 Record: 94-68, 1st in AL East, eliminated in World Series</li>
+     <li>Player to Watch: Addison Barger</li>
+     <li>2026 Projected Win Total per FanGraphs: 88.3 (2nd in AL East)</li>
+   </ul>
   </details>
 
    <details class="team nleast nationals">
     <summary>Washington Nationals</summary>
-    <ul>
-      <li>Projected 92 wins</li>
-      <li>Strength: Bullpen depth</li>
-      <li>X-Factor: Young starting pitching</li>
-      <li>Big Question: Offensive consistency</li>
-    </ul>
+     <p> The Nationals were one of the worst teams in baseball last year, and likely will be again in 2026. The Nationals got a five-prospect haul from the Rangers in the MacKenzie Gore trade, but none stand out as elite prospects yet. Hopefully for Washington, outfielder Dylan Crews makes a leap in his third season in the MLB, but for right now, things aren't looking all that great in the nation's capital.
+   <ul>
+     <li>2025 Record: 66-96, 5th in NL East, missed playoffs</li>
+     <li>Player to Watch: Jake Irvin </li>
+     <li>2026 Projected Win Total per FanGraphs: 66.1 (5th in NL East)</li>
+   </ul>
   </details>
-
+<!--the code below is also sample code from the JavaScript lab, in order to filter out teams based on their divisions-->
   <script>
  function filter(cat) {
       let teams = document.querySelectorAll('.team');
@@ -368,5 +380,4 @@
     }
   </script>
 </body>
-</div>
 </div>
